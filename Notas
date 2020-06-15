@@ -1,0 +1,6 @@
+Notas Vehiculo autónomo:
+
+La votación local no mejora el resultado
+Encoger la imagen ayuda, sin embargo zonas que en la imagen original eran consideradas como ruido son ahora relevantes y afectan la medición (e.g. arbustos, zonas muy iluminadas)
+Aplicar un filtro antes de la convolución con los kernels de Gabor "difumina" la imagen, lo que ocasiona que la reacción ante los kernels sea cercana a cero (localidades muy homogeneas)
+La respuesta a los kernels es en algunos pixeles menor a 0.85 (valor definido originalmente). Quitando esta restricción, los nuevos votantes aportan información valiosa para el cálculo del punto de fuga, quitando el ruido con técnicas como confianza (confidence) y la resta de las componentes no predominantes.
